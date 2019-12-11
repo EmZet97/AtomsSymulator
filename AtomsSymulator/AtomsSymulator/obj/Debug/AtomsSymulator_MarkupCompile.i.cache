@@ -2,19 +2,19 @@
 
 
 winexe
-VB
-.vb
+C#
+.cs
 D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\
 AtomsSymulator
 none
 false
-
-D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\Application.xaml
+DEBUG;TRACE
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\App.xaml
 11151548125
 
-7-922817937
-111682248113
+8-682858843
+13-1505183044
 MainWindow.xaml;
 
-True
+False
 
