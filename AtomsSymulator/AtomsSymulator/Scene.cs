@@ -6,23 +6,17 @@ using System.Threading.Tasks;
 
 namespace AtomsSymulator
 {
-    class Point
+    class Scene
     {
+        private double a;
         private Vector2D position;
-        private Vector2D speed;
-        private double r;
 
-        public Point()
-        {
-
-        }
-
-        public State SaveState()
+        public Scene(double a, Vector2D position)
         {
             throw new NotImplementedException();
         }
 
-        public void RecoverState(State state)
+        public bool CheckIfOutside(Vector2D objectToCheck)
         {
             throw new NotImplementedException();
         }

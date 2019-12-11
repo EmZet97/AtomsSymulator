@@ -6,23 +6,16 @@ using System.Threading.Tasks;
 
 namespace AtomsSymulator
 {
-    class Point
+    class StateManager
     {
-        private Vector2D position;
-        private Vector2D speed;
-        private double r;
+        public State[] states;
 
-        public Point()
-        {
-
-        }
-
-        public State SaveState()
+        public bool LoadFromFile(string path)
         {
             throw new NotImplementedException();
         }
 
-        public void RecoverState(State state)
+        public bool SaveToFile(string path)
         {
             throw new NotImplementedException();
         }
