@@ -46,5 +46,26 @@ namespace AtomsSymulator
             Vector2D vector2D = new Vector2D(x / l, y / l);
             return vector2D;
         }
+
+        public double DistanceTo(Vector2D vector)
+        {
+            double xDiff = vector.X - x;
+            double yDiff = vector.Y - y;
+
+            double distance = Math.Sqrt(xDiff * xDiff + yDiff * yDiff);
+            return distance;
+        }
+
+        public static Vector2D operator +(Vector2D v1, Vector2D v2)
+        {
+            Vector2D new_vec = new Vector2D(x: v1.X + v2.X, v1.Y + v2.Y);
+            return new_vec;
+        }
+
+        public static Vector2D operator *(Vector2D v1, double m)
+        {
+            Vector2D new_vec = new Vector2D(x: v1.X * m, v1.Y * m);
+            return new_vec;
+        }
     }
 }

@@ -13,12 +13,18 @@ namespace AtomsSymulator
 
         public Scene(double a, Vector2D position)
         {
-            throw new NotImplementedException();
+            this.a = a;
+            this.position = position;
         }
 
-        public bool CheckIfOutside(Vector2D objectToCheck)
+        public double GetA()
         {
-            throw new NotImplementedException();
+            return a;
+        }
+
+        public Vector2D GetPosition()
+        {
+            return position;
         }
     }
 }

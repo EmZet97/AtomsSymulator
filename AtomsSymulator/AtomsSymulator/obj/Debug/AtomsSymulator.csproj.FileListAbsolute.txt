@@ -1,0 +1,15 @@
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\bin\Debug\AtomsSymulator.exe.config
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\bin\Debug\AtomsSymulator.exe
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\bin\Debug\AtomsSymulator.pdb
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.csprojAssemblyReference.cache
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\MainWindow.g.cs
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\App.g.cs
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator_MarkupCompile.cache
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator_MarkupCompile.lref
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\MainWindow.baml
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.g.resources
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.Properties.Resources.resources
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.csproj.GenerateResource.cache
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.csproj.CoreCompileInputs.cache
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.exe
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.pdb

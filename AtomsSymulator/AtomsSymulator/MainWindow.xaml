@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Canvas x:Name="PlainCanvas" Width="400px" Height="400" Background="#FFB9B9B9"/>
+        <Button Width="100px" Height="50px" Margin="0,369,692,0" Click="Button_Click" Background="#FFC5C5C5">Generuj</Button>
+        <Button Content="Start/Stop" Width="100px" Height="50px" Margin="692,369,0,0" Click="Button_Click_1"></Button>
     </Grid>
 </Window>

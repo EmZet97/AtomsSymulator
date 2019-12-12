@@ -55,6 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AtomPhysics.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="TimeFrameManager.cs" />
     <Compile Include="Vector2D.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
