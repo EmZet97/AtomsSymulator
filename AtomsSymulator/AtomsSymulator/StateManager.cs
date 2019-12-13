@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +10,22 @@ namespace AtomsSymulator
 {
     class StateManager
     {
-        public State[] states;
+        public List<State> states;
 
-        public bool LoadFromFile(string path)
+
+        public StateManager()
         {
-            throw new NotImplementedException();
+            states = new List<State>();
         }
 
-        public bool SaveToFile(string path)
+        public State GetState(int index)
         {
-            throw new NotImplementedException();
+            return states[index];
+        }
+
+        public void AddState(State s)
+        {
+            states.Add(s);
         }
     }
 }

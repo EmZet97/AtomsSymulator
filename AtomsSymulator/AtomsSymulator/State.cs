@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,27 @@ namespace AtomsSymulator
 {
     class State
     {
-        private string data;
+        private List<Point> data;
 
-        public object GetState()
+
+        public State(List<Point> points)
         {
-            throw new NotImplementedException();
+            data = new List<Point>();
+            foreach(Point point in points)
+            {
+                Vector2D position = new Vector2D(point.GetPosition().X, point.GetPosition().Y);
+                Vector2D speed = new Vector2D(point.GetSpeed().X, point.GetSpeed().Y);
+                double r = point.GetR();
+
+                Point p = new Point(position, speed, r);
+                data.Add(p);
+            }
         }
 
-        public void SetState(object state)
+
+        public List<Point> GetState()
         {
-            throw new NotImplementedException();
+            return data;
         }
     }
 }

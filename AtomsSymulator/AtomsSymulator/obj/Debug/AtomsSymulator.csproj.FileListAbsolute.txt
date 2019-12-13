@@ -13,3 +13,6 @@ D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.
 D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.csproj.CoreCompileInputs.cache
 D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.exe
 D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.pdb
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\AtomsSymulator\AtomsSymulator\AtomsSymulator\obj\Debug\AtomsSymulator.csproj.CopyComplete

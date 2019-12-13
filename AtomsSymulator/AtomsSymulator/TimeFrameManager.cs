@@ -20,6 +20,8 @@ namespace AtomsSymulator
         private Thread renderThread;
         private MainWindow mainWindow;
 
+        private StateManager stateManager;
+
         public TimeFrameManager(double deltaTime, Canvas canvas, Scene scene, MainWindow mainWindow)
         {
             this.deltaTime = deltaTime;
@@ -28,6 +30,8 @@ namespace AtomsSymulator
             this.mainWindow = mainWindow;
             points = new List<Point>();
             renderThread = new Thread(CreateFrame);
+            stateManager = new StateManager();
+
         }
 
         public void AddPointToRenderer(Point point)
@@ -129,9 +133,28 @@ namespace AtomsSymulator
             renderThread.Abort();
         }
 
-        public void LoadStates(State[] states)
+        public void SaveState()
         {
-            throw new NotImplementedException();
+            State state = new State(points);
+            stateManager.AddState(state);
+        }
+
+        public void LoadState(int index)
+        {
+            points.Clear();
+            State state = stateManager.GetState(index);
+            Console.WriteLine("Get " + index);
+
+            points = new List<Point>();
+            foreach (Point point in state.GetState())
+            {
+                Vector2D position = new Vector2D(point.GetPosition().X, point.GetPosition().Y);
+                Vector2D speed = new Vector2D(point.GetSpeed().X, point.GetSpeed().Y);
+                double r = point.GetR();
+
+                Point p = new Point(position, speed, r);
+                points.Add(p);
+            }
         }
 
 

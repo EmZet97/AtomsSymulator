@@ -50,5 +50,20 @@ namespace AtomsSymulator
 
             started = !started;
         }
+
+        int i = 0;
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            framer.SaveState();
+            DropDownBox.Items.Add("Save " + i++);
+        }
+
+        private void DropDownBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            framer.Stop();
+            framer.LoadState(DropDownBox.SelectedIndex);
+            framer.Start();
+
+        }
     }
 }
