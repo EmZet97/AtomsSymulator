@@ -13,6 +13,7 @@ namespace AtomsSymulator
     {
         private Vector2D position;
         private Vector2D speed;
+        private List<Point> collidersEntered;
         private double r;
 
         public Point(Vector2D position, Vector2D speed, double r)
@@ -20,6 +21,7 @@ namespace AtomsSymulator
             this.position = position;
             this.speed = speed;
             this.r = r;
+            collidersEntered = new List<Point>();
         }
 
         public void Draw(Canvas cv)
@@ -44,8 +46,16 @@ namespace AtomsSymulator
         {
             if (position.DistanceTo(point.GetPosition()) < (r + point.GetR()))
             {
-                Console.WriteLine("Collision " + position.DistanceTo(point.GetPosition()) + " vs " + (r + point.GetR()));
-                return true;
+                if (!collidersEntered.Contains(point))
+                {
+                    Console.WriteLine("Collision " + position.DistanceTo(point.GetPosition()) + " vs " + (r + point.GetR()));
+                    collidersEntered.Add(point);
+                    return true;
+                }
+            }
+            else
+            {
+                collidersEntered.Remove(point);
             }
                 
 

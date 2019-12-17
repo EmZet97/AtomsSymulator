@@ -27,7 +27,7 @@ namespace AtomsSymulator
             
             InitializeComponent();
             Scene scene = new Scene(400, new Vector2D(0, 0));
-            framer = new TimeFrameManager(0.03, PlainCanvas, scene, this);
+            framer = new TimeFrameManager(0.01, PlainCanvas, scene, this);
             framer.Start();
         }
 
@@ -36,7 +36,7 @@ namespace AtomsSymulator
             Random r = new Random();
             double sx = r.Next(-50, 50) / 10;
             double sy = r.Next(-50, 50) / 10;
-            double sr = r.Next(50, 200) / 10;
+            double sr = r.Next(50, 150) / 10;
             Point p = new Point(new Vector2D(200, 200), new Vector2D(sx, sy), sr);
             framer.AddPointToRenderer(p);
         }
@@ -64,6 +64,11 @@ namespace AtomsSymulator
             framer.LoadState(DropDownBox.SelectedIndex);
             framer.Start();
 
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            framer.Stop();
         }
     }
 }
