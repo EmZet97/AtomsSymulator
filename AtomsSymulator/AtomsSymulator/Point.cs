@@ -48,7 +48,7 @@ namespace AtomsSymulator
             {
                 if (!collidersEntered.Contains(point))
                 {
-                    Console.WriteLine("Collision " + position.DistanceTo(point.GetPosition()) + " vs " + (r + point.GetR()));
+                    //Console.WriteLine("Collision " + position.DistanceTo(point.GetPosition()) + " vs " + (r + point.GetR()));
                     collidersEntered.Add(point);
                     return true;
                 }

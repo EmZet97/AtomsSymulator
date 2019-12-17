@@ -12,6 +12,7 @@ namespace AtomsSymulator
     {
         private const int timeStep = 10; //time in miliseconds
         private List<Point> points;
+        private List<Point> nextFramePoints;
 
         private double time = 0.0;
         private double deltaTime;
@@ -29,6 +30,7 @@ namespace AtomsSymulator
             this.scene = scene;
             this.mainWindow = mainWindow;
             points = new List<Point>();
+            nextFramePoints = new List<Point>();
             renderThread = new Thread(CreateFrame);
             stateManager = new StateManager();
 
@@ -36,7 +38,7 @@ namespace AtomsSymulator
 
         public void AddPointToRenderer(Point point)
         {
-            points.Add(point);
+            nextFramePoints.Add(point);
         }
 
         public double GetActualTime()
@@ -54,7 +56,7 @@ namespace AtomsSymulator
         {
             while (true)
             {
-                Console.WriteLine("Framing");
+                //Console.WriteLine("Framing");
                 Move();
                 MakePhysics();
                 Render();
@@ -64,6 +66,12 @@ namespace AtomsSymulator
 
         private void Render()
         {
+            foreach(Point p in nextFramePoints)
+            {
+                points.Add(p);
+            }
+            nextFramePoints.Clear();
+
             mainWindow.Dispatcher.Invoke((Action)(() =>
             {
                 // Clear canvas
@@ -102,7 +110,7 @@ namespace AtomsSymulator
                         if (p.IsColliding(pp))
                         {
                             //double average_speed = (p.GetSpeed().GetLength() + pp.GetSpeed().GetLength()) / 2;
-                            Console.WriteLine("Force atom");
+                            //Console.WriteLine("Force atom");
                             Vector2D nc_spped = p.GetSpeed(); //(p.GetSpeed()  + not_checked[i].GetSpeed() * (not_checked[i].GetR() / p.GetR())).Normalized() * average_speed;
                             Vector2D p_spped = pp.GetSpeed();// (not_checked[i].GetSpeed() + p.GetSpeed() * (p.GetR() / not_checked[i].GetR())).Normalized() * average_speed;
 
@@ -143,7 +151,7 @@ namespace AtomsSymulator
         {
             points.Clear();
             State state = stateManager.GetState(index);
-            Console.WriteLine("Get " + index);
+            //Console.WriteLine("Get " + index);
 
             points = new List<Point>();
             foreach (Point point in state.GetState())
